@@ -1,0 +1,38 @@
+---
+layout: default
+---	
+<div id="head">
+    <div class='logo left'>
+        <a href="/" title="Home">fanmzdj.com</a>
+    </div>
+    <div id="header">
+        <div class="nav right">
+            <a href="/blog.html" title="Thoughts On Something">Blog</a>
+            <a href="/project.html" title="Projects Ongoing">Project</a>
+            <a href="/wiki.html" title="Wiki" >Wiki</a>
+            <a href="/about.html" title="About BeiYuu" >About</a>
+        </div><!-- .nav -->
+    </div><!-- #header -->
+</div><!-- #head -->
+
+	<div id="category">
+	<div class="nav right">
+		<h4>Category</h4>
+		<ul>{% for category in site.categories %}
+			<li><a href="/categories/{{ category | first }}/" title="view all posts">
+				{{ category | first }} 
+				{{ category | last | size }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	</div>
+
+<div id="content">
+    {{ content }}
+</div><!-- #content --> 
+<div id="footer">
+    <div class="copyright right">
+        <p>本博客风格设计者BeiYuu，链接请转到...Design by <a href="http://beiyuu.com/about" target="_blank">BeiYuu</a> &copy; Copyright 2012</p>
+    </div>
+</div><!-- #footer -->

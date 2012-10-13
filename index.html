@@ -1,10 +1,65 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Hello</title>
-</head>
+---
+layout: default
+title:	fanmzdj.com
+---
+<div id="head">
+    <div class='logo left'>
+        <a href="/" title="Home">{{ page.title }}</a>
+    </div>
+</div>
+<h2><p>MY BLOG</p></h2>
+<ul>
+	{% for post in site.posts %}
+		<li>{{ post.date | date_to_string }}
+			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+		</li>
+	{% endfor %}
+</ul>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var imgWidth,imgHeight,winWidth,winHeight;
+        var imgComplete = function(){
+            imgHeight = BYB.img.height;
+            imgWidth = BYB.img.width;
+            resizeWindow();
+            //$('#mycard').css({'opacity':0.8});
+            $('body').css('background','none');
+            $(BYB.img).animate({opacity:'toggle'},500);
+        };
 
-<body>
-<h1>Hello!</h1>
-</body>
-</html>
+        var resizeWindow = function(){
+            var _width,_height;
+            winHeight = $(document).height();
+            winWidth = $(document).width();
+            _height = imgHeight*winWidth/imgWidth;
+            _width = imgWidth*winHeight/imgHeight;
+            if(_height < winHeight){
+                $('#bgImage').css({'height':winHeight,'width':_width,'left':-(_width-winWidth)*0.5});
+            }else{
+                $('#bgImage').css({'width':winWidth,'height':_height,'left':0});
+            }
+        };
+
+        $(BYB.img).css({'position':'fixed','top':'0','z-index':'-2','display':'none'});
+        $('body').append(BYB.img);
+        if(BYB.img.complete){
+            imgComplete()
+        }else{
+            BYB.img.onload = imgComplete;
+        }
+
+        $(window).on('resize',resizeWindow);
+
+        $('#mycard div').on('mouseenter',function(){
+            if(!$(this).hasClass('name')){
+                $(this).addClass('link-hover');
+                $(this).children('.link-info').removeClass('hide').animate({height:'23px'},'fast');
+            }
+        });
+        $('#mycard div').on('mouseleave',function(){
+            $(this).removeClass('link-hover');
+            $(this).children('.link-info').stop().animate({height:'0'});
+        });
+    })
+</script>
+
