@@ -36,6 +36,7 @@ category: 技术
 	6.	update-grub
 	
 	重启进入，应该会有启动项了；
+
 	参考文章：<a href="http://www.zhouwenyi.com/node/6756/">使用Ubuntu Live CD修复Grub引导</a>
 
 补充1：
@@ -56,6 +57,7 @@ category: 技术
 							 若没有，挂载你的 /分区
 	4.	sudo grub-install --root-directory=/mnt /dev/sda 
 	尝试重启；
+
 	参考文章：<a href="http://datamining.xmu.edu.cn/bbs/forum.php?mod=viewthread&tid=624/">解决Grub Rescue: invalid arch independent ELF magic问题</a>
 
 补充3：
@@ -69,5 +71,6 @@ category: 技术
 	卸载linux步骤：
 	打开shell,命令如下：
 		sudo dd if=/usr/lib/sys/mbr.bin of=/dev/sda
+
 	参考文章：<a href="http://blog.csdn.net/majestyhao/article/details/7913429/">一个及其简单的卸载linux的方法</a>
 	
