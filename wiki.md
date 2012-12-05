@@ -3,7 +3,7 @@ layout: page
 title: Wiki
 ---
 <div class="wiki">
-    <h2>Javascript</h2>
+    <a herf="http://zh.wikipedia.org/zh/JavaScript"><h2>Javascript</h2></a>
     <ul class="hide">
         <li><a href="http://jqfundamentals.com/book/index.html">
 		jQuery Fundamentals</a> -jQuery 入门教程。</li>
