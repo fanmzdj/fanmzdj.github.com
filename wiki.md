@@ -3,7 +3,14 @@ layout: page
 title: Wiki
 ---
 <div class="wiki">
-    <a herf="http://zh.wikipedia.org/zh/JavaScript"><h2>Javascript</h2></a>
+    <a href="http://zh.wikipedia.org/zh/JavaScript"><h2>Javascript</h2></a>
+    
+    <ul class="hide">
+        <li><a href="http://jqfundamentals.com/book/index.html">
+    	jQuery Fundamentals</a> -jQuery 入门教程。</li>
+    </ul>
+    
+    <a href="http://en.wikipedia.org/wiki/Robert_Lucas,_Jr."><h2>J.R.Lucas</h2></a>
 </div>
 <script type="text/javascript">
     $(document).ready(function(){
