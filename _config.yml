@@ -2,3 +2,5 @@ title:fanmzdj
 baseurl:/fanmzdj.github.com
 safe:false
 feed:/atom.xml
+
+theme: jekyll-theme-cayman
