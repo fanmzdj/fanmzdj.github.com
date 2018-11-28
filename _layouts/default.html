@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!--
-		**
-		* Author:         fanmzdj
-		* Contact:        fanmzdj@gmail.com
-		* Theme Name:     颜色，一种情感，还有一种美
-		* Create Date:    2012-09
-		**
-		-->
-	　　<meta http-equiv="content-type"content="text/html;charset=utf-8"/>
-		<meta name="description" content="{{ site.description }}" />
-		<link rel="stylesheet" href="/css/default.css" type="text/css" />
-		<script type="text/javascript" src="http://fanmzdj.com/js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript">
-			var BYB = {};
-		</script>
-		<title>
-
-			{{ page.title }}
-		
-		</title>
-	</head>
-	<body>
-		
-			{{ content }}
-			<script type="text/javascript">
-        BYB.includeScript = function(file,callback){
-            var _doc = document.getElementsByTagName('head')[0];
-            var js = document.createElement('script');
-            js.setAttribute('type', 'text/javascript');
-            js.setAttribute('src', file);
-            _doc.appendChild(js);
-
-            if (!/*@cc_on!@*/0) { //if not IE
-                //Firefox2、Firefox3、Safari3.1+、Opera9.6+ support js.onload
-                js.onload = function () {
-                    callback();
-                }
-            } else {
-                //IE6、IE7 support js.onreadystatechange
-                js.onreadystatechange = function () {
-                    if (js.readyState == 'loaded' || js.readyState == 'complete') {
-                        callback();
-                    }
-                }
-            }
-            return false;
-        }
-
-        //if(!window.jQuery){
-            //BYB.includeScript('http://beiyuu.com/js/jquery-1.7.1.min.js',BYB.readyFunction);
-        //}else{
-            //BYB.readyFunction();
-        //}
+  <head>
+    <!--
+      **
+      * Author:         fanmzdj
+      * Contact:        fanmzdj@gmail.com
+      * Theme Name:     颜色，一种情感，还有一种美
+      * Create Date:    2012-09
+      **
+    -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="stylesheet" href="/css/default.css" type="text/css" />
+    <script
+      type="text/javascript"
+      src="http://fanmzdj.com/js/jquery-1.7.1.min.js"
+    ></script>
+    <script type="text/javascript">
+      var BYB = {};
     </script>
-		
-	</body>
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {{ content }}
+    <script type="text/javascript">
+      BYB.includeScript = function(file, callback) {
+        var _doc = document.getElementsByTagName("head")[0];
+        var js = document.createElement("script");
+        js.setAttribute("type", "text/javascript");
+        js.setAttribute("src", file);
+        _doc.appendChild(js);
+
+        if (!/*@cc_on!@*/ 0) {
+          //if not IE
+          //Firefox2、Firefox3、Safari3.1+、Opera9.6+ support js.onload
+          js.onload = function() {
+            callback();
+          };
+        } else {
+          //IE6、IE7 support js.onreadystatechange
+          js.onreadystatechange = function() {
+            if (js.readyState == "loaded" || js.readyState == "complete") {
+              callback();
+            }
+          };
+        }
+        return false;
+      };
+
+      //if(!window.jQuery){
+      //BYB.includeScript('http://beiyuu.com/js/jquery-1.7.1.min.js',BYB.readyFunction);
+      //}else{
+      //BYB.readyFunction();
+      //}
+    </script>
+  </body>
 </html>
