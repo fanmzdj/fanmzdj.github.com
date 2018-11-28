@@ -2,6 +2,7 @@
 layout: page
 title: Project
 ---
+
 <div class="category">
 	<h2>哦^^......可能还没有project，谢谢。。。</h2>
     <ul>
@@ -14,4 +15,5 @@ title: Project
         </li>
     {% endfor %}
     </ul>
-</div><!-- .entry -->
+</div>
+<!-- .entry -->
